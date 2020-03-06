@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="home">Angular</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+  
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin']" #botaoAdm [hidden]="!apareceBotao()"  
+            routerLinkActive="active">Inicio</a>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Cadastro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/usuarios']">Cadastro de Usuários</a>
+            <a class="dropdown-item" [routerLink]="['/produtos']" #botaoAdm [hidden]="!apareceBotao()">Cadastro de
+              Produtos</a>
+          </div>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cadastrados
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" #botaoAdm [hidden]="!apareceBotao()" [routerLink]="['/usuarios/usuario-list']">Usuários Cadastrados</a>
+            <a class="dropdown-item" #botaoAdm [hidden]="!apareceBotao()" [routerLink]="['/produtos/produtos-list']">Produtos Cadastrados</a>
+            <a class="dropdown-item" #botaoAdm [hidden]="apareceBotao()" [routerLink]="['/produtos/produtos-mostrar']">Produtos Cadastrados</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/pokemons']" routerLinkActive="active">Pokemons</a>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Formulários
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/usuarios/template-form']">Template Form</a>
+            <a class="dropdown-item" [routerLink]="['/usuarios/data-form']">Data Form</a>
+          </div>
+        </li>
+  
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+  
+        <button data-toggle="modal" data-target="#exampleModalCenter" [routerLink]="['/login']"
+          class="btn btn-outline-success my-2 my-sm-0 mr-3" #botaoAdm [hidden]="apareceBotao()">Login</button>
+  
+        <button class="btn btn-outline-danger my-2 my-sm-0" #botaoAdm [hidden]="!apareceBotao()" [routerLink]="['/login']"
+          (click)="deslogar()">Deslogar</button>
+  
+      </form>
+    </div>
+  </nav>
