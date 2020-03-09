@@ -9,11 +9,14 @@
       <ul class="navbar-nav mr-auto">
   
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/admin']" #botaoAdm [hidden]="!apareceBotao()"  
-            routerLinkActive="active">Inicio</a>
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/livros']" routerLinkActive="active">Livros</a>
         </li>
   
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Cadastro
@@ -23,46 +26,39 @@
             <a class="dropdown-item" [routerLink]="['/produtos']" #botaoAdm [hidden]="!apareceBotao()">Cadastro de
               Produtos</a>
           </div>
-        </li>
+        </li> -->
   
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Cadastrados
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" #botaoAdm [hidden]="!apareceBotao()" [routerLink]="['/usuarios/usuario-list']">Usuários Cadastrados</a>
-            <a class="dropdown-item" #botaoAdm [hidden]="!apareceBotao()" [routerLink]="['/produtos/produtos-list']">Produtos Cadastrados</a>
-            <a class="dropdown-item" #botaoAdm [hidden]="apareceBotao()" [routerLink]="['/produtos/produtos-mostrar']">Produtos Cadastrados</a>
+            <a class="dropdown-item"  [routerLink]="['/usuarios/usuario-list']">Usuários Cadastrados</a>
+            <a class="dropdown-item"  [routerLink]="['/produtos/produtos-list']">Produtos Cadastrados</a>
+            <a class="dropdown-item"  [routerLink]="['/produtos/produtos-mostrar']">Produtos Cadastrados</a>
           </div>
-        </li>
+        </li> -->
   
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/pokemons']" routerLinkActive="active">Pokemons</a>
-        </li>
-  
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Formulários
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="['/usuarios/template-form']">Template Form</a>
-            <a class="dropdown-item" [routerLink]="['/usuarios/data-form']">Data Form</a>
-          </div>
+          <a class="nav-link" [routerLink]="['/sobre']" routerLinkActive="active">Sobre</a>
         </li>
   
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-  
+<!--   
         <button data-toggle="modal" data-target="#exampleModalCenter" [routerLink]="['/login']"
-          class="btn btn-outline-success my-2 my-sm-0 mr-3" #botaoAdm [hidden]="apareceBotao()">Login</button>
+          class="btn btn-outline-success my-2 my-sm-0 mr-3">Login</button>
   
-        <button class="btn btn-outline-danger my-2 my-sm-0" #botaoAdm [hidden]="!apareceBotao()" [routerLink]="['/login']"
-          (click)="deslogar()">Deslogar</button>
+        <button class="btn btn-outline-danger my-2 my-sm-0"  [routerLink]="['/login']"
+          (click)="deslogar()">Deslogar</button> -->
+
+          <button class="nav-link" [routerLink]="['/home']"></button>
   
       </form>
     </div>
   </nav>
+
+  <!-- #botaoAdm [hidden]="!apareceBotao()" -->
